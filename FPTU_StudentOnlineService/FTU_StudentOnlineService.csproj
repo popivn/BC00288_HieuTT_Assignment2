@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7F82FAB-89B1-4FF2-B73A-D0B4321F9DC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FTU_StudentOnlineService</RootNamespace>
+    <AssemblyName>FTU_StudentOnlineService</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Balance.cs" />
+    <Compile Include="BalanceDAO.cs" />
+    <Compile Include="Connect.cs" />
+    <Compile Include="DataValidation.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="DepartmentDAO.cs" />
+    <Compile Include="EncryptionHelper.cs" />
+    <Compile Include="ServiceRegistrationHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceRegistrationHistory.Designer.cs">
+      <DependentUpon>ServiceRegistrationHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceTransactionHistory.cs" />
+    <Compile Include="Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Student_RegInformationChangeService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_RegInformationChangeService.Designer.cs">
+      <DependentUpon>Student_RegInformationChangeService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_registration.Designer.cs">
+      <DependentUpon>Student_registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Form1.Designer.cs">
+      <DependentUpon>Home_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationChangeService.cs" />
+    <Compile Include="InformationChangeServiceDAO.cs" />
+    <Compile Include="Login_Form0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form0.Designer.cs">
+      <DependentUpon>Login_Form0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniForm_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniForm_Home.Designer.cs">
+      <DependentUpon>MiniForm_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniForm_StudentAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniForm_StudentAccount.Designer.cs">
+      <DependentUpon>MiniForm_StudentAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationDepartment.Designer.cs">
+      <DependentUpon>RegistrationDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepositoryService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepositoryService.Designer.cs">
+      <DependentUpon>RepositoryService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoleType.cs" />
+    <Compile Include="RoleTypeDAO.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="ServiceDAO.cs" />
+    <Compile Include="ServiceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceDetail.Designer.cs">
+      <DependentUpon>ServiceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType.cs" />
+    <Compile Include="ServiceTypeDAO.cs" />
+    <Compile Include="Statistical.cs" />
+    <Compile Include="StatisticalDAO.cs" />
+    <Compile Include="Statisticall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statisticall.Designer.cs">
+      <DependentUpon>Statisticall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentConfirmationDAO.cs" />
+    <Compile Include="StudentConfirmationService.cs" />
+    <Compile Include="StudentForm_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm_Home.Designer.cs">
+      <DependentUpon>StudentForm_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_RegstudentconfirmationService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_RegstudentconfirmationService.Designer.cs">
+      <DependentUpon>Student_RegstudentconfirmationService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Studetn_RegtuitionreductionService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Studetn_RegtuitionreductionService.Designer.cs">
+      <DependentUpon>Studetn_RegtuitionreductionService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TuitionReductionService.cs" />
+    <Compile Include="TuitionReductionServiceDAO.cs" />
+    <Compile Include="Users.cs" />
+    <Compile Include="UsersDAO.cs" />
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceRegistrationHistory.resx">
+      <DependentUpon>ServiceRegistrationHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_RegInformationChangeService.resx">
+      <DependentUpon>Student_RegInformationChangeService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_registration.resx">
+      <DependentUpon>Student_registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Form1.resx">
+      <DependentUpon>Home_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form0.resx">
+      <DependentUpon>Login_Form0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiniForm_Home.resx">
+      <DependentUpon>MiniForm_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiniForm_StudentAccount.resx">
+      <DependentUpon>MiniForm_StudentAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistrationDepartment.resx">
+      <DependentUpon>RegistrationDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepositoryService.resx">
+      <DependentUpon>RepositoryService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceDetail.resx">
+      <DependentUpon>ServiceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statisticall.resx">
+      <DependentUpon>Statisticall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm_Home.resx">
+      <DependentUpon>StudentForm_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_RegstudentconfirmationService.resx">
+      <DependentUpon>Student_RegstudentconfirmationService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Studetn_RegtuitionreductionService.resx">
+      <DependentUpon>Studetn_RegtuitionreductionService.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Dai-hoc-FPT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerService.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Dai-hoc-FPT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lookup.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
